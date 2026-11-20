@@ -1,4 +1,4 @@
-name: "Build OpenReadest APK (优化�? - 表格防重�?"
+name: "Build OpenReadest APK (优化版4 - 修复图片长按卡死)"
 # swipe + native prefetch + adaptive tables + scrollable wrappers + image long-press freeze fix
 
 on:
