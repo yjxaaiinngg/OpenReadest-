@@ -1,4 +1,4 @@
-name: Build OpenReadest APK (优化版: 滑动翻页 + 原生加速)
+name: "Build OpenReadest APK (优化版 - 滑动翻页 + 原生加速)"
 # Optimized build: swipe-to-paginate toggle + Rust native EPUB prefetch
 # (OPF/nav/ncx pre-read in Rust for faster book opening on e-ink devices).
 
