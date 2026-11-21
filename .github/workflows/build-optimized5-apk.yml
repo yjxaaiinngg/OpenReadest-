@@ -69,7 +69,7 @@ jobs:
            import { isReadingStatsEnabled } from '@/services/statistics/remainingTime';
            import { SettingsPanelPanelProp } from './SettingsDialog';
            import { annotationToolQuickActions } from '@/app/reader/components/annotator/AnnotationTools';
-          +import { setLongPressImageZoom } from '@/app/reader/utils/iframeEventHandlers';
+          +import { setLongPressImageZoom as applyLongPressImageZoom } from '@/app/reader/utils/iframeEventHandlers';
            import NumberInput from './NumberInput';
            import Select from '../Select';
            
@@ -113,7 +113,7 @@ jobs:
           +  }, [swipeToPaginate]);
           +
           +  useEffect(() => {
-          +    setLongPressImageZoom(longPressImageZoom);
+          +    applyLongPressImageZoom(longPressImageZoom);
           +    saveViewSettings(envConfig, bookKey, 'longPressImageZoom', longPressImageZoom, false, false);
           +    // eslint-disable-next-line react-hooks/exhaustive-deps
           +  }, [longPressImageZoom]);
