@@ -3149,7 +3149,7 @@ jobs:
           diff --git a/apps/openreadest-app/src/app/reader/components/ImageZoomViewer.tsx b/apps/openreadest-app/src/app/reader/components/ImageZoomViewer.tsx
           --- /dev/null
           +++ b/apps/openreadest-app/src/app/reader/components/ImageZoomViewer.tsx
-          @@ -0,0 +1,107 @@
+          @@ -0,0 +1,109 @@
           +import React, { useEffect, useRef, useState } from 'react';
           +
           +// Full-screen image zoom viewer. Long-pressing an inline image in the reader
@@ -3195,8 +3195,10 @@ jobs:
           +
           +  const distance = (touches: TouchList) => {
           +    if (touches.length < 2) return 0;
-          +    const dx = touches[0].clientX - touches[1].clientX;
-          +    const dy = touches[0].clientY - touches[1].clientY;
+          +    const a = touches[0]!;
+          +    const b = touches[1]!;
+          +    const dx = a.clientX - b.clientX;
+          +    const dy = a.clientY - b.clientY;
           +    return Math.sqrt(dx * dx + dy * dy);
           +  };
           +
